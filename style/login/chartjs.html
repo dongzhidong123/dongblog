@@ -1,0 +1,681 @@
+﻿<!doctype html>
+
+
+ <html lang="en"> 
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<head><script language="JavaScript" type="text/javascript"> 
+<!-- 
+
+setTimeout("openAd()",5000);
+
+function openAd()
+{
+if(window.location.href.toLowerCase().indexOf("http")==0&&(getCookie("AWWWB_AD")==null||getCookie("AWWWB_AD")==""))
+{
+window.open('http://tchu.a3wb.com','_blank','width=600,height=300,left=100,top=50'); 
+
+var d=new Date();
+d.setHours(d.getHours()+1);
+document.cookie="AWWWB_AD=true;expires="+d.toUTCString();
+}
+}
+
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    { 
+    c_start=c_start + c_name.length+1 
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    } 
+  }
+return ""
+}
+
+
+//--> 
+    </script>
+   <meta charset="utf-8" />
+   <title>metro风格响应式后台管理系统模板metroadmin chart图表- js代码网</title>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+   <meta content="" name="description" />
+   <meta content="" name="author" />
+   <link href="bootstrap.min.css" rel="stylesheet" />
+   <link href="bootstrap-responsive.min.css" rel="stylesheet" />
+   <link href="bootstrap-fileupload.css" rel="stylesheet" />
+   <link href="font-awesome.css" rel="stylesheet" />
+   <link href="style.css" rel="stylesheet" />
+   <link href="style-responsive.css" rel="stylesheet" />
+   <link href="style-default.css" rel="stylesheet" id="style_color" />
+
+</head>
+
+
+<body class="fixed-top">
+   
+   <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+       
+       <div class="navbar-inner">
+           <div class="container-fluid">
+               
+               <div class="sidebar-toggle-box hidden-phone">
+                   <div class="icon-reorder tooltips" data-placement="right" data-original-title="toggle navigation"></div>
+               </div>
+               
+               
+               <a class="brand" href="index.html">
+                   <img src="logo.png" alt="metro lab" />
+               </a>
+               
+               
+               <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="arrow"></span>
+               </a>
+               
+               <div id="top_menu" class="nav notify-row">
+                   
+                   <ul class="nav top-menu">
+                       
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-tasks"></i>
+                               <span class="badge badge-important">6</span>
+                           </a>
+                           <ul class="dropdown-menu extended tasks-bar">
+                               <li>
+                                   <p>you have 6 pending tasks</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                         <div class="desc">dashboard v1.3</div>
+                                         <div class="percent">44%</div>
+                                       </div>
+                                       <div class="progress progress-striped active no-margin-bot">
+                                           <div class="bar" style="width: 44%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">database update</div>
+                                           <div class="percent">65%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-success active no-margin-bot">
+                                           <div class="bar" style="width: 65%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">iphone development</div>
+                                           <div class="percent">87%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-info active no-margin-bot">
+                                           <div class="bar" style="width: 87%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">mobile app</div>
+                                           <div class="percent">33%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-warning active no-margin-bot">
+                                           <div class="bar" style="width: 33%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">dashboard v1.3</div>
+                                           <div class="percent">90%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-danger active no-margin-bot">
+                                           <div class="bar" style="width: 90%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li class="external">
+                                   <a href="#">see all tasks</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+                       
+                       <li class="dropdown" id="header_inbox_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-envelope-alt"></i>
+                               <span class="badge badge-important">5</span>
+                           </a>
+                           <ul class="dropdown-menu extended inbox">
+                               <li>
+                                   <p>you have 5 new messages</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jonathan smith</span>
+									<span class="time">just now</span>
+									</span>
+									<span class="message">
+									    hello, this is an example msg.
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jhon doe</span>
+									<span class="time">10 mins</span>
+									</span>
+									<span class="message">
+									 hi, jhon doe bhai how are you ?
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jason stathum</span>
+									<span class="time">3 hrs</span>
+									</span>
+									<span class="message">
+									    this is awesome dashboard.
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jondi rose</span>
+									<span class="time">just now</span>
+									</span>
+									<span class="message">
+									    hello, this is metrolab
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">see all messages</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+                       
+                       <li class="dropdown" id="header_notification_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                               <i class="icon-bell-alt"></i>
+                               <span class="badge badge-warning">7</span>
+                           </a>
+                           <ul class="dropdown-menu extended notification">
+                               <li>
+                                   <p>you have 7 new notifications</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       server #3 overloaded.
+                                       <span class="small italic">34 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-warning"><i class="icon-bell"></i></span>
+                                       server #10 not respoding.
+                                       <span class="small italic">1 hours</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       database overloaded 24%.
+                                       <span class="small italic">4 hrs</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-success"><i class="icon-plus"></i></span>
+                                       new user registered.
+                                       <span class="small italic">just now</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-info"><i class="icon-bullhorn"></i></span>
+                                       application error.
+                                       <span class="small italic">10 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">see all notifications</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+
+                   </ul>
+               </div>
+               
+               <div class="top-nav ">
+                   <ul class="nav pull-right top-menu" >
+                       
+                       <li class="dropdown mtop5">
+
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="chat">
+                               <i class="icon-comments-alt"></i>
+                           </a>
+                       </li>
+                       <li class="dropdown mtop5">
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="help">
+                               <i class="icon-headphones"></i>
+                           </a>
+                       </li>
+                       
+                       
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <img src="avatar1_small.jpg" alt="">
+                               <span class="username">jhon doe</span>
+                               <b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu extended logout">
+                               <li><a href="#"><i class="icon-user"></i> my profile</a></li>
+                               <li><a href="#"><i class="icon-cog"></i> my settings</a></li>
+                               <li><a href="login.html"><i class="icon-key"></i> log out</a></li>
+                           </ul>
+                       </li>
+                       
+                   </ul>
+                   
+               </div>
+           </div>
+       </div>
+       
+   </div>
+   
+   
+   <div id="container" class="row-fluid">
+      
+      <div class="sidebar-scroll">
+          <div id="sidebar" class="nav-collapse collapse">
+
+              
+              <div class="navbar-inverse">
+                  <form class="navbar-search visible-phone">
+                      <input type="text" class="search-query" placeholder="search" />
+                  </form>
+              </div>
+              
+              
+              <ul class="sidebar-menu">
+                  <li class="sub-menu">
+                      <a class="" href="index.html">
+                          <i class="icon-dashboard"></i>
+                          <span>dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-book"></i>
+                          <span>ui elements</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="general.html">general</a></li>
+                          <li><a class="" href="button.html">buttons</a></li>
+                          <li><a class="" href="slider.html">sliders</a></li>
+                          <li><a class="" href="metro_view.html">metro view</a></li>
+                          <li><a class="" href="tabs_accordion.html">tabs & accordions</a></li>
+                          <li><a class="" href="typography.html">typography</a></li>
+                          <li><a class="" href="tree_view.html">tree view</a></li>
+                          <li><a class="" href="nestable.html">nestable list</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu active">
+                      <a href="javascript:;" class="">
+                          <i class="icon-cogs"></i>
+                          <span>components</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="calendar.html">calendar</a></li>
+                          <li><a class="" href="grids.html">grids</a></li>
+                          <li class="active"><a class="" href="chartjs.html">chart js</a></li>
+                          <li><a class="" href="flot_chart.html">flot charts</a></li>
+                          <li><a class="" href="gallery.html"> gallery</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-tasks"></i>
+                          <span>form stuff</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="form_layout.html">form layouts</a></li>
+                          <li><a class="" href="form_component.html">form components</a></li>
+                          <li><a class="" href="form_wizard.html">form wizard</a></li>
+                          <li><a class="" href="form_validation.html">form validation</a></li>
+                          <li><a class="" href="dropzone.html">dropzone file upload </a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-th"></i>
+                          <span>data tables</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="basic_table.html">basic table</a></li>
+                          <li><a class="" href="dynamic_table.html">dynamic table</a></li>
+                          <li><a class="" href="editable_table.html">editable table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-fire"></i>
+                          <span>icons</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="font_awesome.html">font awesome</a></li>
+                          <li><a class="" href="glyphicons.html">glyphicons</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="" href="javascript:;">
+                          <i class="icon-trophy"></i>
+                          <span>portlets</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="general_portlet.html" class=""> general portlet</a></li>
+                          <li><a href="draggable_portlet.html" class="">draggable portlet</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="" href="javascript:;">
+                          <i class="icon-map-marker"></i>
+                          <span>maps</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="vector_map.html" class="">vector maps</a></li>
+                          <li><a href="google_map.html" class="">google map</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-file-alt"></i>
+                          <span>sample pages</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="blank.html">blank page</a></li>
+                          <li><a class="" href="blog.html">blog</a></li>
+                          <li><a class="" href="timeline.html">timeline</a></li>
+                          <li><a class="" href="profile.html">profile</a></li>
+                          <li><a class="" href="about_us.html">about us</a></li>
+                          <li><a class="" href="contact_us.html">contact us</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-glass"></i>
+                          <span>extra</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="lock.html">lock screen</a></li>
+                          <li><a class="" href="invoice.html">invoice</a></li>
+                          <li><a class="" href="pricing_tables.html">pricing tables</a></li>
+                          <li><a class="" href="search_result.html">search result</a></li>
+                          <li><a class="" href="faq.html">faq</a></li>
+                          <li><a class="" href="404.html">404 error</a></li>
+                          <li><a class="" href="500.html">500 error</a></li>
+                      </ul>
+                  </li>
+
+                  <li>
+                      <a class="" href="login.html">
+                          <i class="icon-user"></i>
+                          <span>login page</span>
+                      </a>
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+      
+        
+      <div id="main-content">
+         
+         <div class="container-fluid">
+               
+            <div class="row-fluid">
+               <div class="span12">
+                   
+                   <div id="theme-change" class="hidden-phone">
+                       <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">theme color:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-green" data-style="green"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-red" data-style="red"></span>
+                            </span>
+                        </span>
+                   </div>
+                   
+                  
+                   <h3 class="page-title">
+                     chartjs
+                   </h3>
+                   <ul class="breadcrumb">
+                       <li>
+                           <a href="#">home</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li>
+                           <a href="#">components</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li class="active">
+                           chartjs
+                       </li>
+                       <li class="pull-right search-wrap">
+                           <form action="http://www.js-css.cn/divcss/admin/metro/search_result.html" class="hidden-phone">
+                               <div class="input-append search-input-area">
+                                   <input class="" id="appendedinputbutton" type="text">
+                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
+                               </div>
+                           </form>
+                       </li>
+                   </ul>
+                   
+               </div>
+            </div>
+            
+            
+
+            <div id="page-wraper">
+                <div class="row-fluid">
+                    <div class="span6">
+                        
+                        <div class="widget green">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> doughnut</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="doughnut" height="300" width="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="span6">
+                        
+                        <div class="widget orange">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"> </i> line</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="line" height="300" width="450"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        
+                        <div class="widget purple">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> polararea</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="polararea" height="300" width="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="span6">
+                        
+                        <div class="widget blue">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> bar</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="bar" height="300" width="500"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> pie</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="pie" height="300" width="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="span6">
+                        
+                        <div class="widget yellow">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> radar</h4>
+                            <span class="tools">
+                                <a href="javascript:;" class="icon-chevron-down"></a>
+                                <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="text-center">
+                                    <canvas id="radar" height="300" width="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+                     
+         </div>
+         
+      </div>
+        
+   </div>
+   
+
+   
+   <div id="footer">
+       2013 &copy; metro lab dashboard.
+   </div>
+   
+
+   
+   
+   <script src="jquery-1.8.3.min.js"></script>
+   <script src="jquery.nicescroll.js" type="text/javascript"></script>
+   <script src="bootstrap.min.js"></script>
+   <script src="chart.js"></script>
+   <script src="jquery.scrollto.min.js"></script>
+
+   
+   <!--[if lt ie 9]>
+   <script src="http://www.js-css.cn/js/excanvas.js"></script>
+   <script src="http://www.js-css.cn/js/respond.js"></script>
+   <![endif]-->
+
+
+   
+   <script src="common-scripts.js"></script>
+
+   
+   <script src="all-chartjs.js"></script>
+
+      
+</body>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</html>

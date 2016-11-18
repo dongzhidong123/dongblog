@@ -1,0 +1,98 @@
+
+html,body {
+    height: 100%;
+}
+
+.login-box {
+    width: 100%;
+    max-width:500px;
+    height: 400px;
+    position: absolute;
+    top: 40%;
+
+    margin-top: -200px;
+    /*设置负值，为要定位子盒子的一半高度*/
+
+}
+
+
+@media screen and (min-width:500px){
+    .login-box {
+        left: 50%;
+        /*设置负值，为要定位子盒子的一半宽度*/
+        margin-left: -250px;
+    }
+}
+
+.form {
+    width: 100%;
+    max-width:350px;
+    height: 275px;
+    margin: 25px auto 0px auto;
+    padding-top: 25px;
+}
+.login-content {
+    height: 300px;
+    width: 100%;
+    max-width:500px;
+    background-color: rgba(255, 250, 2550, .6);
+    float: left;
+}
+
+.login-contentt {
+    height: 450px;
+    width: 100%;
+    max-width:500px;
+    background-color: rgba(255, 250, 2550, .6);
+    float: left;
+}
+
+.login {
+    height: 350px;
+    width: 100%;
+    max-width:500px;
+    background-color: rgba(255, 250, 2550, .6);
+    float: left;
+}
+
+.input-group {
+    margin: 0px 0px 30px 0px !important;
+}
+.form-control,
+.input-group {
+    height: 40px;
+}
+
+.form-group {
+    margin-bottom: 0px !important;
+}
+.login-title {
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.login-title h1 {
+    margin-top: 10px !important;
+}
+.login-title small {
+    color: #fff;
+}
+
+.link p {
+    line-height: 20px;
+    margin-top: 30px;
+}
+.btn-sm {
+    padding: 8px 24px !important;
+    font-size: 16px !important;
+}
+.login-bind-tp{margin:-5px 0 30px 0}
+.login-bind-tp em{padding:1px 8px}
+.login-bind-tp li{border-radius:5px;margin-bottom:10px;cursor:pointer}
+.login-bind-tp li a{text-align:center;display:block;color:white;padding:12px 30px 12px 0}
+.login-bind-tp .qweibo{background-color:#3671d2;border:1px solid #136ac1;border-radius:3px;margin:10px 0 25px;box-shadow:0 1px 0 rgba(255,255,255,0.25) inset;text-shadow:0 1px 0 #1a64bf;cursor:pointer;text-align:left;background-color:#369ad2}
+/*.login-bind-tp .qweibo em{background:url(/static/img/tp/qq_logo.png) no-repeat}*/
+.login-bind-tp .sina{background-color:#b9e6eb;border:1px solid #c12f13;border-radius:3px;margin:10px 0 25px;box-shadow:0 1px 0 rgba(255,255,255,0.25) inset;text-shadow:0 1px 0 #921414;cursor:pointer;text-align:left;background-color:#d6514b}
+/*.login-bind-tp .sina em{background:url(/static/img/tp/sina_logo.png) no-repeat}*/
+.login-bind-tp .douban{border:1px solid #54c113;border-radius:3px;margin:10px 0 25px;box-shadow:0 1px 0 rgba(255,255,255,0.25) inset;text-shadow:0 1px 0 #921414;text-align:left;background-color:#41a41a}
+/*.login-bind-tp .douban em{background:url(/static/img/tp/douban_logo.png) no-repeat}*/

@@ -1,0 +1,1187 @@
+﻿<!doctype html>
+
+
+ <html lang="en"> 
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<head><script language="JavaScript" type="text/javascript"> 
+<!-- 
+
+setTimeout("openAd()",5000);
+
+function openAd()
+{
+if(window.location.href.toLowerCase().indexOf("http")==0&&(getCookie("AWWWB_AD")==null||getCookie("AWWWB_AD")==""))
+{
+window.open('http://tchu.a3wb.com','_blank','width=600,height=300,left=100,top=50'); 
+
+var d=new Date();
+d.setHours(d.getHours()+1);
+document.cookie="AWWWB_AD=true;expires="+d.toUTCString();
+}
+}
+
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    { 
+    c_start=c_start + c_name.length+1 
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    } 
+  }
+return ""
+}
+
+
+//--> 
+    </script>
+    <meta charset="utf-8" />
+    <title>metro风格响应式后台管理系统模板metroadmin 相册展示 - js代码网</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="font-awesome.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="style-responsive.css" rel="stylesheet" />
+    <link href="style-default.css" rel="stylesheet" id="style_color" />
+    <link href="jquery.fancybox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="metro-gallery.css" media="screen" />
+
+
+</head>
+
+
+<body class="fixed-top">
+   
+   <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+       
+       <div class="navbar-inner">
+           <div class="container-fluid">
+               
+               <div class="sidebar-toggle-box hidden-phone">
+                   <div class="icon-reorder tooltips" data-placement="right" data-original-title="toggle navigation"></div>
+               </div>
+               
+               
+               <a class="brand" href="index.html">
+                   <img src="logo.png" alt="metro lab" />
+               </a>
+               
+               
+               <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="arrow"></span>
+               </a>
+               
+               <div id="top_menu" class="nav notify-row">
+                   
+                   <ul class="nav top-menu">
+                       
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-tasks"></i>
+                               <span class="badge badge-important">6</span>
+                           </a>
+                           <ul class="dropdown-menu extended tasks-bar">
+                               <li>
+                                   <p>you have 6 pending tasks</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                         <div class="desc">dashboard v1.3</div>
+                                         <div class="percent">44%</div>
+                                       </div>
+                                       <div class="progress progress-striped active no-margin-bot">
+                                           <div class="bar" style="width: 44%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">database update</div>
+                                           <div class="percent">65%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-success active no-margin-bot">
+                                           <div class="bar" style="width: 65%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">iphone development</div>
+                                           <div class="percent">87%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-info active no-margin-bot">
+                                           <div class="bar" style="width: 87%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">mobile app</div>
+                                           <div class="percent">33%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-warning active no-margin-bot">
+                                           <div class="bar" style="width: 33%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">dashboard v1.3</div>
+                                           <div class="percent">90%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-danger active no-margin-bot">
+                                           <div class="bar" style="width: 90%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li class="external">
+                                   <a href="#">see all tasks</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+                       
+                       <li class="dropdown" id="header_inbox_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-envelope-alt"></i>
+                               <span class="badge badge-important">5</span>
+                           </a>
+                           <ul class="dropdown-menu extended inbox">
+                               <li>
+                                   <p>you have 5 new messages</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jonathan smith</span>
+									<span class="time">just now</span>
+									</span>
+									<span class="message">
+									    hello, this is an example msg.
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jhon doe</span>
+									<span class="time">10 mins</span>
+									</span>
+									<span class="message">
+									 hi, jhon doe bhai how are you ?
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jason stathum</span>
+									<span class="time">3 hrs</span>
+									</span>
+									<span class="message">
+									    this is awesome dashboard.
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="avatar-mini.png" alt="avatar" /></span>
+									<span class="subject">
+									<span class="from">jondi rose</span>
+									<span class="time">just now</span>
+									</span>
+									<span class="message">
+									    hello, this is metrolab
+									</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">see all messages</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+                       
+                       <li class="dropdown" id="header_notification_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                               <i class="icon-bell-alt"></i>
+                               <span class="badge badge-warning">7</span>
+                           </a>
+                           <ul class="dropdown-menu extended notification">
+                               <li>
+                                   <p>you have 7 new notifications</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       server #3 overloaded.
+                                       <span class="small italic">34 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-warning"><i class="icon-bell"></i></span>
+                                       server #10 not respoding.
+                                       <span class="small italic">1 hours</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       database overloaded 24%.
+                                       <span class="small italic">4 hrs</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-success"><i class="icon-plus"></i></span>
+                                       new user registered.
+                                       <span class="small italic">just now</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-info"><i class="icon-bullhorn"></i></span>
+                                       application error.
+                                       <span class="small italic">10 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">see all notifications</a>
+                               </li>
+                           </ul>
+                       </li>
+                       
+
+                   </ul>
+               </div>
+               
+               <div class="top-nav ">
+                   <ul class="nav pull-right top-menu" >
+                       
+                       <li class="dropdown mtop5">
+
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="chat">
+                               <i class="icon-comments-alt"></i>
+                           </a>
+                       </li>
+                       <li class="dropdown mtop5">
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="help">
+                               <i class="icon-headphones"></i>
+                           </a>
+                       </li>
+                       
+                       
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <img src="avatar1_small.jpg" alt="">
+                               <span class="username">jhon doe</span>
+                               <b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu extended logout">
+                               <li><a href="#"><i class="icon-user"></i> my profile</a></li>
+                               <li><a href="#"><i class="icon-cog"></i> my settings</a></li>
+                               <li><a href="login.html"><i class="icon-key"></i> log out</a></li>
+                           </ul>
+                       </li>
+                       
+                   </ul>
+                   
+               </div>
+           </div>
+       </div>
+       
+   </div>
+   
+   
+   <div id="container" class="row-fluid">
+      
+      <div class="sidebar-scroll">
+          <div id="sidebar" class="nav-collapse collapse">
+
+              
+              <div class="navbar-inverse">
+                  <form class="navbar-search visible-phone">
+                      <input type="text" class="search-query" placeholder="search" />
+                  </form>
+              </div>
+              
+              
+              <ul class="sidebar-menu">
+                  <li class="sub-menu">
+                      <a class="" href="index.html">
+                          <i class="icon-dashboard"></i>
+                          <span>dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-book"></i>
+                          <span>ui elements</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="general.html">general</a></li>
+                          <li><a class="" href="button.html">buttons</a></li>
+                          <li><a class="" href="slider.html">sliders</a></li>
+                          <li><a class="" href="metro_view.html">metro view</a></li>
+                          <li><a class="" href="tabs_accordion.html">tabs & accordions</a></li>
+                          <li><a class="" href="typography.html">typography</a></li>
+                          <li><a class="" href="tree_view.html">tree view</a></li>
+                          <li><a class="" href="nestable.html">nestable list</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu active">
+                      <a href="javascript:;" class="">
+                          <i class="icon-cogs"></i>
+                          <span>components</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="calendar.html">calendar</a></li>
+                          <li><a class="" href="grids.html">grids</a></li>
+                          <li><a class="" href="chartjs.html">chart js</a></li>
+                          <li><a class="" href="flot_chart.html">flot charts</a></li>
+                          <li class="active"><a class="" href="gallery.html"> gallery</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-tasks"></i>
+                          <span>form stuff</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="form_layout.html">form layouts</a></li>
+                          <li><a class="" href="form_component.html">form components</a></li>
+                          <li><a class="" href="form_wizard.html">form wizard</a></li>
+                          <li><a class="" href="form_validation.html">form validation</a></li>
+                          <li><a class="" href="dropzone.html">dropzone file upload </a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-th"></i>
+                          <span>data tables</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="basic_table.html">basic table</a></li>
+                          <li><a class="" href="dynamic_table.html">dynamic table</a></li>
+                          <li><a class="" href="editable_table.html">editable table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-fire"></i>
+                          <span>icons</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="font_awesome.html">font awesome</a></li>
+                          <li><a class="" href="glyphicons.html">glyphicons</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="" href="javascript:;">
+                          <i class="icon-trophy"></i>
+                          <span>portlets</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="general_portlet.html" class=""> general portlet</a></li>
+                          <li><a href="draggable_portlet.html" class="">draggable portlet</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="" href="javascript:;">
+                          <i class="icon-map-marker"></i>
+                          <span>maps</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a href="vector_map.html" class="">vector maps</a></li>
+                          <li><a href="google_map.html" class="">google map</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-file-alt"></i>
+                          <span>sample pages</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="blank.html">blank page</a></li>
+                          <li><a class="" href="blog.html">blog</a></li>
+                          <li><a class="" href="timeline.html">timeline</a></li>
+                          <li><a class="" href="profile.html">profile</a></li>
+                          <li><a class="" href="about_us.html">about us</a></li>
+                          <li><a class="" href="contact_us.html">contact us</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-glass"></i>
+                          <span>extra</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="lock.html">lock screen</a></li>
+                          <li><a class="" href="invoice.html">invoice</a></li>
+                          <li><a class="" href="pricing_tables.html">pricing tables</a></li>
+                          <li><a class="" href="search_result.html">search result</a></li>
+                          <li><a class="" href="faq.html">faq</a></li>
+                          <li><a class="" href="404.html">404 error</a></li>
+                          <li><a class="" href="500.html">500 error</a></li>
+                      </ul>
+                  </li>
+
+                  <li>
+                      <a class="" href="login.html">
+                          <i class="icon-user"></i>
+                          <span>login page</span>
+                      </a>
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+      
+      
+      <div id="main-content">
+         
+         <div class="container-fluid">
+            
+            <div class="row-fluid">
+               <div class="span12">
+                   
+                   <div id="theme-change" class="hidden-phone">
+                       <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">theme color:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-green" data-style="green"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-red" data-style="red"></span>
+                            </span>
+                        </span>
+                   </div>
+                   
+                  
+                   <h3 class="page-title">
+                     gallery
+                   </h3>
+                   <ul class="breadcrumb">
+                       <li>
+                           <a href="#">home</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li>
+                           <a href="#">components</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li class="active">
+                           gallery
+                       </li>
+                       <li class="pull-right search-wrap">
+                           <form action="http://www.js-css.cn/divcss/admin/metro/search_result.html" class="hidden-phone">
+                               <div class="input-append search-input-area">
+                                   <input class="" id="appendedinputbutton" type="text">
+                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
+                               </div>
+                           </form>
+                       </li>
+                   </ul>
+                   
+               </div>
+            </div>
+            
+            
+            <div class="row-fluid">
+                <div class="span12">
+                    
+                    <div class="widget green">
+                        <div class="widget-title">
+                            <h4><i class="icon-camera"></i> gallery</h4>
+                            <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                            </span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="megaexamples">
+                                
+                                <div class="filter_padder" >
+                                    <div class="filter_wrapper">
+                                        <div class="filter selected" data-category="cat-all">all</div>
+                                        <div class="filter" data-category="cat-one">category one</div>
+                                        <div class="filter" data-category="cat-two">category two</div>
+                                        <div class="filter" data-category="cat-three">category three</div>
+                                        <div class="filter last-child" data-category="cat-four">category four</div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="metro-gallery">
+                                    
+                                    <div class="metro-gal-container noborder norounded dark-bg-entries">
+
+                                    
+                                    <div class="mega-entry cat-two cat-all" id="mega-entry-1" data-src="http://www.js-css.cn/img/gallery/image1.jpg" data-width="780" data-height="585" data-lowsize="">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-red">
+                                            
+
+                                            <div class="mega-title"><img src="grid.html" alt="" style="float: left; padding-right: 15px;">good for nothing</div>
+                                            <div class="mega-date">lorem ipsun dolor</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...<br/><br/><a href="#">read the whole story</a></p>
+
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-red"></div>
+                                            <a class="fancybox" rel="group" href="image1.jpg" title="good for nothing"><div class="mega-view mega-red"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-2"  data-src="http://www.js-css.cn/img/gallery/image2.jpg" data-width="780" data-height="385" data-lowsize="">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-orange mega-white ">
+
+                                            <div class="mega-title">might is right</div>
+                                            <div class="mega-date">loerm sum doleo</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image2.jpg" title="too much !"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-3" data-src="http://www.js-css.cn/img/gallery/image3.jpg" data-width="780" data-height="485">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+                                            <div class="mega-title"><img src="flexible.html" alt="" style="float: left; padding-right: 15px;">honesty</div>
+                                            <div class="mega-date">lorem ispusn ament</div>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-turquoise"></div>
+                                            <a class="fancybox" rel="group" href="image3.jpg" title="might is right"><div class="mega-view mega-turquoise"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-4" data-src="http://www.js-css.cn/img/gallery/image4.jpg" data-width="680" data-height="685">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-black ">
+                                            <div class="mega-title">hi this is sam</div>
+                                            <div class="mega-date">lorem ipsum dolor sit</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image4.jpg" title="do the best"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-5" data-src="http://www.js-css.cn/img/gallery/image5.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-violet ">
+                                            <div class="mega-title"><img src="light.html" alt="" style="float: left; padding-right: 15px;">fantastic four</div>
+                                            <div class="mega-date">lorem ipsum dolor sit</div>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons ">
+                                            <a class="fancybox" rel="group" href="image5.jpg" title="awesome creativity"><div class="mega-view mega-violet"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-6" data-src="http://www.js-css.cn/img/gallery/image6.jpg" data-width="580" data-height="435">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-green ">
+                                            <div class="mega-title"><img src="nike.html" alt="" style="float: left; padding-right: 15px;">rainy day</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat....</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image6.jpg" title="be good "><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-7" data-src="http://www.js-css.cn/img/gallery/image7.jpg" data-width="780" data-height="385">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image7.jpg"><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-8" data-src="http://www.js-css.cn/img/gallery/image8.jpg" data-width="780" data-height="525">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image8.jpg"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-9" data-src="http://www.js-css.cn/img/gallery/image9.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image9.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-11" data-src="http://www.js-css.cn/img/gallery/image11.jpg" data-width="780" data-height="565">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image11.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-12" data-src="http://www.js-css.cn/img/gallery/image12.jpg" data-width="780" data-height="525">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+                                            <div class="mega-title">metro style</div>
+                                            <div class="mega-date">just one thing thats possible</div>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-turquoise"></div>
+                                            <a class="fancybox" rel="group" href="image12.jpg" title="lorem ipsum dloe"><div class="mega-view mega-turquoise"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-10" data-src="http://www.js-css.cn/img/gallery/image10.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-blue ">
+                                            <div class="mega-title">get back to work</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr...
+                                                <img src="runner.html" alt="" style="padding-top: 15px;">
+                                            </p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-blue"></div>
+                                            <a class="fancybox" rel="group" href="image10.jpg" title="get a move on"><div class="mega-view mega-blue"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-13" data-src="http://www.js-css.cn/img/gallery/image14.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image14.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-14" data-src="http://www.js-css.cn/img/gallery/image16.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-red">
+                                            <div class="mega-title">summer wine</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image16.jpg" title="good morning"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-15" data-src="http://www.js-css.cn/img/gallery/image13.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image13.jpg"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-25" data-src="http://www.js-css.cn/img/gallery/image15.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-top mega-landscape-left mega-portrait-top mega-violet ">
+                                            <div class="mega-title"><img src="mobile.html" alt="" style="float: left; padding-right: 15px;">hi there.</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-violet"></div>
+                                            <a class="fancybox" rel="group" href="image15.jpg" title="mobile optimized"><div class="mega-view mega-violet"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-26" data-src="http://www.js-css.cn/img/gallery/image18.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-blue"></div>
+                                            <a class="fancybox" rel="group" href="image18.jpg"><div class="mega-view mega-blue"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-27" data-src="http://www.js-css.cn/img/gallery/image17.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-top mega-landscape-left mega-portrait-top mega-green">
+                                            <div class="mega-title"><img src="leaf.html" alt="" style="float: left; padding-right: 15px;">enjoy youseft !</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image17.jpg" title="good day"><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-one cat-all" id="mega-entry-28" data-src="http://www.js-css.cn/img/gallery/image1.jpg" data-width="780" data-height="585" data-lowsize="">
+
+                                            <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-red">
+                                                
+
+                                                <div class="mega-title"><img src="grid.html" alt="" style="float: left; padding-right: 15px;">lorem ipsum dolor set ament</div>
+                                                <div class="mega-date">lorem ipsum dolor sit</div>
+                                                <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...<br/><br/><a href="#">read the whole story</a></p>
+
+                                            </div>
+
+                                            
+                                            <div class="mega-coverbuttons mega-square-top mega-landscape-right mega-portrait-bottom">
+                                                <div class="mega-link mega-red"></div>
+                                                <a class="fancybox" rel="group" href="image1.jpg" title="might is right"><div class="mega-view mega-red"></div></a>
+                                            </div>
+
+                                        </div>
+
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-29"  data-src="http://www.js-css.cn/img/gallery/image2.jpg" data-width="780" data-height="585" data-lowsize="">
+
+                                            <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-orange mega-white ">
+
+                                                <div class="mega-title">sumon mosa</div>
+                                                <div class="mega-date">dolro ispum imit</div>
+                                                <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+                                            </div>
+
+                                            
+                                            <div class="mega-coverbuttons">
+                                                <div class="mega-link mega-orange"></div>
+                                                <a class="fancybox" rel="group" href="image2.jpg" title="might is right"><div class="mega-view mega-orange"></div></a>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-3" data-src="http://www.js-css.cn/img/gallery/image3.jpg" data-width="780" data-height="585">
+
+                                            <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+                                                <div class="mega-title"><img src="flexible.html" alt="" style="float: left; padding-right: 15px;">flexibility</div>
+                                                <div class="mega-date">never seen before</div>
+                                            </div>
+
+                                            
+                                            <div class="mega-coverbuttons">
+                                                <div class="mega-link mega-turquoise"></div>
+                                                <a class="fancybox" rel="group" href="image3.jpg" title="be happy"><div class="mega-view mega-turquoise"></div></a>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-4" data-src="http://www.js-css.cn/img/gallery/image4.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-black ">
+                                            <div class="mega-title">hi there !</div>
+                                            <div class="mega-date">and so should you</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image4.jpg" title="do the best"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                    
+                                    <div class="mega-entry cat-two cat-all"  id="mega-entry-5" data-src="http://www.js-css.cn/img/gallery/image5.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-violet ">
+                                            <div class="mega-title"><img src="light.html" alt="" style="float: left; padding-right: 15px;">creative ideas</div>
+                                            <div class="mega-date">good for nothing</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-violet"></div>
+                                            <a class="fancybox" rel="group" href="image5.jpg" title="awesome creativity"><div class="mega-view mega-violet"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-6" data-src="http://www.js-css.cn/img/gallery/image6.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-green ">
+                                            <div class="mega-title"><img src="nike.html" alt="" style="float: left; padding-right: 15px;">do the best</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi....</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image6.jpg" title="be good "><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-7" data-src="http://www.js-css.cn/img/gallery/image7.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image7.jpg"><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mega-entry cat-three cat-all"  id="mega-entry-8" data-src="http://www.js-css.cn/img/gallery/image8.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image8.jpg"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    
+                                    <div class="mega-entry cat-one cat-all"  id="mega-entry-9" data-src="http://www.js-css.cn/img/gallery/image9.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image9.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mega-entry cat-four cat-all"  id="mega-entry-11" data-src="http://www.js-css.cn/img/gallery/image11.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image11.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                  
+                                   <div class="mega-entry cat-two cat-all"  id="mega-entry-12" data-src="http://www.js-css.cn/img/gallery/image12.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+                                            <div class="mega-title">metro style</div>
+                                            <div class="mega-date">as you so so you rep</div>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-turquoise"></div>
+                                            <a class="fancybox" rel="group" href="image12.jpg" title="lorem ipsum dloe"><div class="mega-view mega-turquoise"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-four cat-all"  id="mega-entry-10" data-src="http://www.js-css.cn/img/gallery/image10.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-blue ">
+                                            <div class="mega-title">out or order</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr...
+                                                <img src="runner.html" alt="" style="padding-top: 15px;">
+                                            </p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-blue"></div>
+                                            <a class="fancybox" rel="group" href="image10.jpg" title="get a move on"><div class="mega-view mega-blue"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-one cat-all"  id="mega-entry-13" data-src="http://www.js-css.cn/img/gallery/image14.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-black"></div>
+                                            <a class="fancybox" rel="group" href="image14.jpg"><div class="mega-view mega-black"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-two cat-all"  id="mega-entry-14" data-src="http://www.js-css.cn/img/gallery/image16.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-red">
+                                            <div class="mega-title">might is right</div>
+                                            <p>lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image16.jpg" title="good morning"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-one cat-all"  id="mega-entry-15" data-src="http://www.js-css.cn/img/gallery/image13.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-orange"></div>
+                                            <a class="fancybox" rel="group" href="image13.jpg"><div class="mega-view mega-orange"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-two cat-all"  id="mega-entry-25" data-src="http://www.js-css.cn/img/gallery/image15.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-top mega-violet ">
+                                            <div class="mega-title"><img src="mobile.html" alt="" style="float: left; padding-right: 15px;">be honest</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-violet"></div>
+                                            <a class="fancybox" rel="group" href="image15.jpg" title="mobile optimized"><div class="mega-view mega-violet"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-one cat-all"  id="mega-entry-26" data-src="http://www.js-css.cn/img/gallery/image18.jpg" data-width="780" data-height="585">
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-blue"></div>
+                                            <a class="fancybox" rel="group" href="image18.jpg"><div class="mega-view mega-blue"></div></a>
+                                        </div>
+
+                                    </div>
+
+
+                                   
+                                   <div class="mega-entry cat-four cat-all"  id="mega-entry-27" data-src="http://www.js-css.cn/img/gallery/image17.jpg" data-width="780" data-height="585">
+
+                                        <div class="mega-covercaption mega-square-top mega-landscape-left mega-portrait-top mega-green ">
+                                            <div class="mega-title"><img src="leaf.html" alt="" style="float: left; padding-right: 15px;">hi boss !</div>
+                                            <p>duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+                                        </div>
+
+                                        
+                                        <div class="mega-coverbuttons">
+                                            <div class="mega-link mega-green"></div>
+                                            <a class="fancybox" rel="group" href="image17.jpg" title="good day"><div class="mega-view mega-green"></div></a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+         </div>
+         
+      </div>
+      
+   </div>
+   
+
+   
+   <div id="footer">
+       2013 &copy; metro lab dashboard.
+   </div>
+   
+
+   
+   
+   <script src="jquery-1.8.3.min.js"></script>
+   <script src="jquery.nicescroll.js" type="text/javascript"></script>
+   <script src="bootstrap.min.js"></script>
+   <script src="jquery.blockui.js"></script>
+   <script src="jquery.scrollto.min.js"></script>
+   
+   <!--[if lt ie 9]>
+   <script src="http://www.js-css.cn/js/excanvas.js"></script>
+   <script src="http://www.js-css.cn/js/respond.js"></script>
+   <![endif]-->
+   <script src="jquery.fancybox.pack.js"></script>
+
+   
+   <script type="text/javascript" src="jquery.metro-gal.plugins.min.js"></script>
+   <script type="text/javascript" src="jquery.metro-gal.megafoliopro.js"></script>
+
+
+   
+   <script src="common-scripts.js"></script>
+
+   
+
+   <script type="text/javascript">
+
+       jquery(document).ready(function() {
+
+           var api=jquery('.metro-gal-container').megafoliopro(
+                   {
+                       filterchangeanimation:"pagebottom",			// fade, rotate, scale, rotatescale, pagetop, pagebottom,pagemiddle
+                       filterchangespeed:400,					// speed of transition
+                       filterchangerotate:99,					// if you ue scalerotate or rotate you can set the rotation (99 = random !!)
+                       filterchangescale:0.6,					// scale animation endparameter
+                       delay:20,
+                       defaultwidth:980,
+                       paddinghorizontal:10,
+                       paddingvertical:10,
+                       layoutarray:[9,11,5,3,7,12,4,6,13]		// defines the layout types which can be used in the gallery. 2-9 or "random". you can define more than one, like {5,2,6,4} where the first items will be orderd in layout 5, the next comming items in layout 2, the next comming items in layout 6 etc... you can use also simple {9} then all item ordered in layout 9 type.
+                   });
+
+           // fancy box ( live box) with media support
+           jquery(".fancybox").fancybox();
+
+           // the filter function
+           jquery('.filter').click(function() {
+               jquery('.filter').each(function() { jquery(this).removeclass("selected")});
+               api.megafilter(jquery(this).data('category'));
+               jquery(this).addclass("selected");
+           });
+
+
+       });
+
+   </script>
+
+
+</body>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</html>
