@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://www.tutuweb.cn/style/admin/css/public.css">
+    <title>Title</title>
+</head>
+<body>
+<table class="table">
+    <tr>
+        <td class="th" colspan="3">查看栏目</td>
+    </tr>
+    <tr>
+        <td>CID</td>
+        <td>栏目名称</td>
+        <td>栏目操作</td>
+    </tr>
+<?php foreach($category as $v) : ?>
+    <tr>
+        <td><?php echo $v['cid'] ?></td>
+        <td><?php echo $v['cname'] ?></td>
+        <td>
+            [<a href="http://www.tutuweb.cn/index.php/admin_category/edit_cate/<?php echo $v['cid'] ?>">编辑</a>]
+            [<a href="http://www.tutuweb.cn/index.php/admin_category/del/<?php echo $v['cid'] ?>">删除</a>]
+        </td>
+    </tr>
+
+    <?php endforeach ?>
+
+</table>
+
+</body>
+</html>

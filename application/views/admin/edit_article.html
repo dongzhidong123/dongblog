@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://www.tutuweb.cn/style/admin/css/public.css">
+    <link rel="stylesheet" type="text/css" href="http://www.tutuweb.cn/static/css/simplemde.min.css">
+    <script src="http://www.tutuweb.cn/static/js/simplemde.min.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        span{
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+<form action = "http://www.tutuweb.cn/index.php/admin_article/edit" method="post" enctype="multipart/form-data">
+    <table class="table">
+        <tr>
+            <td class="th" colspan="10">编辑文章</td>
+        </tr>
+        <tr>
+            <td>标题</td>
+            <td>
+            <span>
+                <input type="text" name="title" value="<?php echo $article[0]['title'] ?>"/>
+                <?php echo form_error('title', '<span>', '</span>') ?>
+            </td>
+        </tr>
+        <tr>
+            <td>栏目</td>
+            <td>
+                <select name="cid">
+                    <?php foreach($category as $v): ?>
+                    <?php $sd =($article[0]['cid']==$v['cid'])?"selected":"";?>
+                    <option value="<?php echo $v['cid'] ?>"<?php echo $sd ?>><?php echo $v['cname'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>摘要</td>
+            <td>
+                <textarea name="info" style="width:550px;height:160px;"><?php echo $article[0]['info']?><?php echo set_value('info') ?></textarea>
+                <?php echo form_error('info','<span>','</span>') ?>
+            </td>
+        </tr>
+        <tr>
+            <td>内容</td>
+            <td>
+                <textarea id="textcontent" name="content" rows="21" ><?php echo $article[0]['content'] ?><?php echo set_value('content') ?></textarea>
+                <?php echo form_error('content', '<span>', '</span>') ?>
+            </td>
+        </tr>
+        <tr>
+            <input type="hidden" name="aid" value="<?php echo $article[0]['aid'] ?>"/>
+            <td colspan="10"><input type="submit" class="input_button" value="发布"/></td>
+        </tr>
+    </table>
+</form>
+<script>
+    var simplemde = new SimpleMDE({ element: document.getElementById("textcontent") });
+</script>
+<script type="text/javascript" src="http://www.tutuweb.cn/static/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm',
+            useStrict: true,
+            defaultDate: 'moment',
+        });
+    });
+</script>
+</body>
+</html>
